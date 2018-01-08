@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Enoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="The_Enoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="372" y="33.733133433283363"/>
         </scene>
-        <!--View Controller-->
+        <!--Definition View Controller-->
         <scene sceneID="8pU-2d-Apd">
             <objects>
-                <viewController id="VHH-W2-arD" sceneMemberID="viewController">
+                <viewController id="VHH-W2-arD" customClass="DefinitionViewController" customModule="The_Enoji_Dictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PeW-AO-11N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +72,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tdo-BZ-uFR"/>
                     </view>
+                    <connections>
+                        <outlet property="emojiDefinition" destination="CfT-yC-gDb" id="P5p-PQ-ZGO"/>
+                        <outlet property="emojiLabel" destination="GgT-jK-6kg" id="aWN-IV-SyW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bgc-BE-ctX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
