@@ -57,7 +57,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is an Alien!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CfT-yC-gDb">
-                                <rect key="frame" x="128" y="386" width="119" height="21"/>
+                                <rect key="frame" x="128" y="386" width="119" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b8O-Yl-IPx">
+                                <rect key="frame" x="109" y="426.5" width="157.5" height="20.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="767-6R-s5E">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Something" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiB-XU-wdr">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age: 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rb-w4-GQU">
+                                <rect key="frame" x="158" y="467" width="59" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -65,14 +87,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7rb-w4-GQU" firstAttribute="centerX" secondItem="PeW-AO-11N" secondAttribute="centerX" id="1oc-G8-Blm"/>
                             <constraint firstItem="CfT-yC-gDb" firstAttribute="top" secondItem="GgT-jK-6kg" secondAttribute="bottom" constant="30" id="62h-Gu-LpD"/>
                             <constraint firstItem="GgT-jK-6kg" firstAttribute="centerX" secondItem="PeW-AO-11N" secondAttribute="centerX" id="8in-zY-8Gw"/>
+                            <constraint firstItem="jiB-XU-wdr" firstAttribute="top" secondItem="CfT-yC-gDb" secondAttribute="bottom" constant="20" id="DG2-Ta-4sa"/>
                             <constraint firstItem="GgT-jK-6kg" firstAttribute="top" secondItem="tdo-BZ-uFR" secondAttribute="top" constant="40" id="ebg-GB-XFD"/>
+                            <constraint firstItem="b8O-Yl-IPx" firstAttribute="centerX" secondItem="PeW-AO-11N" secondAttribute="centerX" id="jif-Nj-aBB"/>
                             <constraint firstItem="CfT-yC-gDb" firstAttribute="centerX" secondItem="PeW-AO-11N" secondAttribute="centerX" id="siO-fW-w7h"/>
+                            <constraint firstItem="7rb-w4-GQU" firstAttribute="top" secondItem="jiB-XU-wdr" secondAttribute="bottom" constant="20" id="v8r-zd-Omd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tdo-BZ-uFR"/>
                     </view>
                     <connections>
+                        <outlet property="birthYearLabel" destination="7rb-w4-GQU" id="AKz-Zb-ztF"/>
+                        <outlet property="categoryLabel" destination="jiB-XU-wdr" id="h6N-k4-3Uq"/>
                         <outlet property="emojiDefinition" destination="CfT-yC-gDb" id="P5p-PQ-ZGO"/>
                         <outlet property="emojiLabel" destination="GgT-jK-6kg" id="aWN-IV-SyW"/>
                     </connections>
